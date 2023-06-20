@@ -1,0 +1,237 @@
+.nav {
+  height: 120px;
+  background: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  @include screen("xs", "md") {
+    height: 100px;
+    overflow: hidden;
+    transition: height .3s ease-out;
+  }
+
+  .navbar-container {
+    margin: 0 auto;
+    @include container('nav');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 16px;
+
+    .logo-container {
+      .logo {
+        display: block;
+      }
+    }
+
+    @include screen("xs", "md") {
+      flex-wrap: wrap;
+      padding-top: 16px;
+
+      .navbar-toggle {
+        width: 68px;
+        height: 68px;
+        position: relative;
+        cursor: pointer;
+
+        div {
+          height: 2px;
+          width: 36px;
+          border-radius: 1px;
+          background: $secondary;
+          left: 14px;
+          position: absolute;
+          top: calc(50% - 1px);
+          transform: translateY(0px) rotate(0deg);
+          transition: transform .3s ease-out;
+
+          &:nth-child(1) {
+            transform: translateY(-10px) rotate(0deg);
+          }
+          &:nth-child(2) {
+            transform: translateY(10px) rotate(0deg);
+          }
+        }
+      }
+    }
+
+    .navbar-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      margin-right: -20px;
+
+      @include screen("xs", "md") {
+        display: block;
+        height: calc(100vh - 100px);
+        width: calc(100% + #{$mobilePadding * 2}px);
+        margin-top: 16px;
+        margin-right: -#{$mobilePadding}px;
+        margin-left: -#{$mobilePadding}px;
+        overflow-y: auto;
+      }
+
+      .navbar-item {
+        display: block;
+        position: relative;
+
+        .navbar-link {
+          display: block;
+          font-size: 18px;
+          font-weight: bold;
+          color: $secondary;
+          padding: 20px;
+          text-decoration: none;
+
+          &.active, &:hover {
+            color: $primary;
+
+            .dropdown-arrow:before {
+              border-right-color: $primary;
+              border-bottom-color: $primary;
+            }
+          }
+        }
+
+        &.dropdown {
+          & > .navbar-link {
+            padding-right: 46px;
+
+            @include screen("xs", "md") {
+              padding-right: 66px;
+            }
+          }
+
+          .dropdown-arrow {
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            width: 26px;
+            height: 26px;
+            pointer-events: none;
+
+            &:before {
+              width: 0px;
+              height: 0px;
+              border: 6px solid $secondary;
+              content: "";
+              display: block;
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              border-left-color: transparent;
+              border-top-color: transparent;
+              transform: translate(-50%, -50%) rotate(45deg);
+              border-radius: 2px;
+            }
+
+            @include screen("xs", "md") {
+              width: 66px;
+              height: 66px;
+              top: 0;
+              right: 0;
+              pointer-events: all;
+              cursor: pointer;
+
+              &:before {
+                transform: translate(-50%, -20%) rotate(45deg);
+              }
+            }
+          }
+
+          .navbar-link:hover ~ .dropdown-arrow:before {
+            border-right-color: $primary;
+            border-bottom-color: $primary;
+          }
+
+          .navbar-dropdown-list {
+            position: absolute;
+            left: 0;
+            list-style: none;
+            margin: 0;
+            padding: 10px 0px;
+            top: 100%;
+            min-width: 200px;
+            box-shadow: 0 5px 20px -5px rgba(black, 0.3);
+            border-radius: 5px;
+            display: none;
+            background: white;
+
+            @include screen("xs", "md") {
+              position: static;
+              width: calc(100% - 20px);
+              margin-left: 10px;
+            }
+
+            .navbar-link {
+              padding: 10px 20px;
+
+              @include screen("xs", "md") {
+                padding: 10px;
+              }
+
+              &:hover, &.active {
+                background: $primary;
+                color: white;
+              }
+            }
+          }
+
+          @include screen("lg", "xxl") {
+            &:hover {
+              .dropdown-arrow:before {
+                transform: translate(-50%, 0%) rotate(-135deg);
+              }
+
+              .navbar-dropdown-list {
+                display: block;
+              }
+            }
+          }
+          @include screen("xs", "md") {
+            &.expanded {
+              .dropdown-arrow:before {
+                transform: translate(-50%, 30%) rotate(-135deg);
+              }
+
+              .navbar-dropdown-list {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    @include screen("xs", "md") {
+      .navbar-toggle {
+        div {
+          &:nth-child(1) {
+            transform: translateY(0px) rotate(45deg);
+          }
+          &:nth-child(2) {
+            transform: translateY(0px) rotate(-45deg);
+          }
+          &:nth-child(3) {
+            transform: translateY(0px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 120px;
+
+  @include screen("xs", "md") {
+    margin-top: 100px;
+  }
+}

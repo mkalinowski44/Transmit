@@ -1,12 +1,18 @@
 // Colors
-$accent: #92211A;
-$highlight: #D61F26;
-$borderColor: #E6E6E6;
+$primary: #3B41B7;
+$secondary: #081427;
+$tertiary: #D7DEE6;
 
-// Fonts
-$fontBase: 'Roboto', sans-serif;
-$fontGotham: "GothamRounded";
-$fontNexa: "Nexa";
+// Spacing
+$desktopPadding: 24;
+$mobilePadding: 12;
+$navWidth: 1580;
+$containerWidth: 1244;
+
+$spaceXS: 25px;
+$spaceS: 45px;
+$spaceM: 65px;
+$spaceL: 85px;
 
 // Responsive breakpoints
 $__breakpoint_xs: 0px;       // 0px - 479px

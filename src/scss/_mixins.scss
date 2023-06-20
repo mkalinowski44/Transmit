@@ -55,3 +55,31 @@
 @function img($name) {
    @return url('../../../dist/img/' + $name);
 }
+
+@mixin container($type) {
+   @if($type == 'nav') {
+      max-width: #{$navWidth + ($desktopPadding * 2)}px;
+
+      @include screen("xs", "md") {
+         max-width: #{$navWidth + ($mobilePadding * 2)}px;
+      }
+   }
+   @if($type != 'nav') {
+      max-width: #{$containerWidth + ($desktopPadding * 2)}px;
+
+      @include screen("xs", "md") {
+         max-width: #{$containerWidth + ($mobilePadding * 2)}px;
+
+      }
+   }
+
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: #{$desktopPadding}px;
+   padding-right: #{$desktopPadding}px;
+
+   @include screen("xs", "md") {
+      padding-left: #{$mobilePadding}px;
+      padding-right: #{$mobilePadding}px;
+   }
+}

@@ -1,23 +1,9 @@
-@import 'typography';
 @import 'variables';
 @import 'mixins';
 @import 'partials/navigation';
-@import 'partials/footer';
-@import 'partials/inputs';
 @import 'partials/home';
-@import 'partials/agencja';
-@import 'partials/author';
-@import 'partials/blog';
-@import 'partials/case1';
-@import 'partials/case2';
-@import 'partials/case3';
-@import 'partials/case4';
-@import 'partials/kontakt';
-@import 'partials/projekty';
-@import 'partials/sklep';
-@import 'partials/team';
-@import 'partials/wydawnictwo';
-@import 'partials/publikacje';
+@import 'partials/form';
+@import 'partials/footer';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -25,37 +11,59 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  color: $secondary;
 }
 
 input, select, textarea, button {
-  font-family: $fontBase;
-}
-
-.page {
-  overflow: hidden;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .container {
-  max-width: 1600px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  @include container('content');
+}
 
-  &.padding {
-    max-width: 1648px;
-    padding: 0 36px;
+h2 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
 
-    @include screen("xs", "sm") {
-      padding: 0 18px;
-    }
+h3 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 16px;
+
+  &.large {
+    font-weight: bold;
+    font-size: 20px;
   }
 }
 
-a {
-  color: inherit;
+.collapse-content {
+  .hidden {
+    display: none;
+  }
+
+  &:after {
+    content: "...";
+  }
+
+  &.expanded {
+    .hidden {
+      display: inline;
+    }
+
+    &:after {
+      content: "";
+    }
+  }
 }
