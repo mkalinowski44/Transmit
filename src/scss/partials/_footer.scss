@@ -4,10 +4,32 @@
   padding-top: $spaceL;
   padding-bottom: $spaceL;
 
+  a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($primary, 30%);
+    }
+  }
+
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    .footer-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @include screen("xs", "md") {
+        flex-direction: column;
+        width: auto;
+      }
+    }
 
     @include screen("xs", "md") {
       flex-direction: column;
@@ -20,20 +42,12 @@
 
       .form-row {
         margin-top: 18px;
-
-        a {
-          color: white;
-          text-decoration: underline;
-          cursor: pointer;
-
-          &:hover {
-            color: lighten($primary, 30%);
-          }
-        }
       }
+
       .checkbox-container {
         padding-left: 20px;
       }
+
       .checkbox-label {
         display: inline;
         position: relative;
@@ -46,11 +60,68 @@
       }
     }
 
+    .footer-groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 20px;
+      grid-gap: $spaceL;
+
+      @include screen("lg", "lg") {
+        grid-gap: $spaceS;
+      }
+
+      @include screen("xs", "md") {
+        grid-gap: $spaceXS;
+        margin-top: 40px;
+      }
+
+      .member {
+        .avatar {
+          width: 212px;
+          padding-top: 100%;
+          position: relative;
+
+          @include screen("xs", "md") {
+            width: 100%;
+          }
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+
+        .name {
+          font-size: 20px;
+          font-weight: bold;
+          margin-top: $spaceXS;
+          margin-bottom: 10px;
+          line-height: 1.2em;
+        }
+
+        .description {
+          font-size: 15px;
+          line-height: 17px;
+        }
+      }
+    }
+
     .logo {
       display: block;
-      margin-top: 60px;
       width: 392px;
       max-width: 100%;
+      margin-top: $spaceL;
+      margin-bottom: $spaceS;
+    }
+
+    .footer-copyright {
+      text-align: center;
+      font-size: 18px;
     }
   }
 }

@@ -16,7 +16,13 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"
+      integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="dist/css/main.min.css" />
   </head>
   <body>
@@ -50,10 +56,10 @@
             </ul>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Services</a>
+            <a href="podstrona.html" class="navbar-link">Services</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link">Research outputs</a>
+            <a href="podstrona.html" class="navbar-link">Research outputs</a>
           </li>
           <li class="navbar-item">
             <a href="blog.html" class="navbar-link">Blog</a>
@@ -250,45 +256,72 @@
     </main>
     <footer id="footer">
       <div class="container">
-        <form action="" class="footer-form">
-          <h3>Contact Us</h3>
-          <input type="text" name="name" class="input-text" placeholder="Name and Surname" />
-          <input type="email" name="email" class="input-text" placeholder="Email" />
-          <textarea
-            name="message"
-            placeholder="Message"
-            class="textarea"
-            id=""
-            cols="30"
-            rows="10"
-          ></textarea>
-          <div class="form-row">
-            <div class="checkbox-container">
-              <label class="checkbox-label">
-                <input type="checkbox" class="input-checkbox" name="rodo" />
-                <span>
-                  <span class="collapse-content" data-collapse="footer">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique porro<span
-                      class="hidden"
-                    >
-                      excepturi rerum aliquam maxime nulla nemo sit repellat Lorem ipsum dolor sit
-                      amet consectetur adipisicing elit. Similique porro excepturi rerum aliquam
-                      maxime nulla nemo sit repellat Lorem ipsum dolor sit amet consectetur
-                      adipisicing elit. Similique porro excepturi rerum aliquam maxime nulla nemo
-                      sit repellat</span
-                    >
+        <div class="footer-row">
+          <form action="" class="footer-form">
+            <h3>Contact Us</h3>
+            <input type="text" name="name" class="input-text" placeholder="Name and Surname" />
+            <input type="email" name="email" class="input-text" placeholder="Email" />
+            <textarea
+              name="message"
+              placeholder="Message"
+              class="textarea"
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+            <div class="form-row">
+              <div class="checkbox-container">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="input-checkbox" name="rodo" />
+                  <span>
+                    <span class="collapse-content" data-collapse="footer">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique porro<span
+                        class="hidden"
+                      >
+                        excepturi rerum aliquam maxime nulla nemo sit repellat Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Similique porro excepturi rerum aliquam
+                        maxime nulla nemo sit repellat Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Similique porro excepturi rerum aliquam maxime nulla nemo
+                        sit repellat</span
+                      >
+                    </span>
                   </span>
-                </span>
-              </label>
-              <a data-collapse="footer" class="collapse-button">More</a>
-            </div>
+                </label>
+                <a data-collapse="footer" class="collapse-button">More</a>
+              </div>
 
-            <button class="btn btn-tertiary" type="submit">Send</button>
+              <button class="btn btn-tertiary" type="submit">Send</button>
+            </div>
+          </form>
+          <div class="footer-groups">
+            <div class="member">
+              <div class="avatar">
+                <img src="dist/img/footer-group1.png" alt="">
+              </div>
+              <div class="name">Anna Skorek-Osikowska</div>
+              <div class="description">
+                <b>Action Chair</b> <br>
+                <b>Email:</b> <a href="mailto:anna.skorek@polsl.pl">anna.skorek@polsl.pl</a>
+              </div>
+            </div>
+            <div class="member">
+              <div class="avatar">
+                <img src="dist/img/footer-group2.png" alt="">
+              </div>
+              <div class="name">Mijndert van der Spek</div>
+              <div class="description">
+                <b>Action Chair</b> <br>
+                <b>Email:</b> <a href="mailto:mv103@hw.ac.uk">mv103@hw.ac.uk</a>
+              </div>
+            </div>
           </div>
-        </form>
-        <a href="#">
+        </div>
+        <a href="index.html">
           <img src="dist/img/footer-logo.png" alt="" class="logo" />
         </a>
+        <div class="footer-copyright">
+          TRANSMIT 2023 All rights reserveddesign by <a href="https://www.futureindesign.com/" target="_blank"><img src="dist/img/future.png" alt=""></a>
+        </div>
       </div>
     </footer>
     <script
@@ -303,7 +336,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="dist/js/main-bundle.min.js"></script>
   </body>
 </html>
