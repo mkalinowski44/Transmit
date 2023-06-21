@@ -65,6 +65,11 @@
     .btn {
       margin: 12px;
     }
+
+    &.bottom {
+      margin-top: $spaceL;
+      margin-bottom: 0;
+    }
   }
 
   .p1 {
@@ -140,7 +145,6 @@
 
 .blog-section {
   padding-top: $spaceS;
-  padding-bottom: $spaceL;
 
   h2 {
     text-align: center;
@@ -224,6 +228,8 @@
 
 .brands {
   margin-bottom: $spaceL;
+
+  padding-top: $spaceL;
 
   .slick-slider {
     .brand {

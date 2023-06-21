@@ -118,7 +118,7 @@
             &:before {
               width: 0px;
               height: 0px;
-              border: 6px solid $secondary;
+              border: 4px solid $secondary;
               content: "";
               display: block;
               position: absolute;
@@ -127,7 +127,6 @@
               border-left-color: transparent;
               border-top-color: transparent;
               transform: translate(-50%, -50%) rotate(45deg);
-              border-radius: 2px;
             }
 
             @include screen("xs", "md") {
