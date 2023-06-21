@@ -192,7 +192,8 @@
 
       .title {
         margin-top: 23px;
-        margin-bottom: 23px;
+        margin-bottom: 18px;
+        line-height: 1.2em;
 
         @include screen("xs", "sm") {
           margin-top: 13px;
@@ -212,6 +213,10 @@
         img {
           transform: scale(1.1);
         }
+      }
+
+      .btn {
+        margin-top: $spaceXS;
       }
     }
   }
