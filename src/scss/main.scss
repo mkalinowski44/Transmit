@@ -5,6 +5,7 @@
 @import 'partials/form';
 @import 'partials/footer';
 @import 'partials/blog';
+@import 'partials/core_groups';
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -70,5 +71,13 @@ p {
     &:after {
       content: "";
     }
+  }
+}
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
   }
 }

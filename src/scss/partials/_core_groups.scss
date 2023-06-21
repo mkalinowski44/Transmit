@@ -1,0 +1,66 @@
+.groups-grid {
+  display: grid;
+  grid-gap: $spaceXS;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+  @include screen("xs", "md") {
+    grid-gap: 12px;
+  }
+
+  .member {
+    background: white;
+    text-align: left;
+    padding-bottom: 20px;
+
+    .thumbnail {
+      position: relative;
+      padding-top: 70%;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+
+      img {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 2s ease-out;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+
+    .name, .contact {
+      font-size: 18px;
+      padding: 0 14px;
+      margin-top: $spaceXS;
+      margin-bottom: 0px;
+    }
+
+    .position {
+      font-size: 14px;
+      padding: 0 14px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin-top: 12px;
+      margin-bottom: $spaceXS;
+      text-align: left;
+      padding: 0 14px;
+      width: 100%;
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .contact {
+      margin-top: 10px;
+    }
+  }
+}
