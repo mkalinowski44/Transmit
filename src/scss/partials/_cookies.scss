@@ -1,0 +1,78 @@
+$background_color: white;
+$accent_color: $primary;
+$font_color: $secondary;
+$wrapper_shadow: 0 5px 20px -2px rgba($font_color, 0.4);
+$animation_speed: .3s;
+
+.ci-wrapper {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: 15px;
+   box-sizing: border-box;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   will-change: transform;
+   transition: transform $animation_speed ease-out;
+   transform: translateY(100%);
+
+   &.ci-show {
+   transform: translateY(0);
+   }
+}
+
+.ci-container {
+   background-color: $background_color;
+   border-radius: 10px;
+   box-shadow: $wrapper_shadow;
+   overflow: hidden;
+}
+
+.ci-information {
+   padding: 20px;
+
+   .ci-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 18px;
+   }
+
+   .ci-description {
+      margin: 15px 0 0 0;
+      font-size: 16px;
+   }
+}
+
+.ci-actions {
+   display: flex;
+   justify-content: flex-end;
+   border-top: 2px solid rgb(236, 236, 236);
+}
+
+.ci-accept-button {
+   color: $background_color;
+   display: block;
+   padding: 20px 30px;
+   background-color: $accent_color;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+   text-align: center;
+
+   &:hover {
+      background: darken($accent_color, 2%);
+   }
+}
+
+.ci-info-button {
+   display: block;
+   color: $font_color;
+   padding: 20px 30px;
+   text-decoration: none;
+   background: $background_color;
+   text-align: center;
+
+   &:hover {
+      background: darken($background_color, 3%);
+   }
+}
