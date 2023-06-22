@@ -1,4 +1,4 @@
-import { screen } from './utils'
+import { screen, debounce } from './utils'
 
 export default function navigation_init() {
   const navbarToggle = $('.navbar-toggle')
@@ -23,5 +23,15 @@ export default function navigation_init() {
       const parent = item.parent()
       parent.toggleClass('expanded')
     })
+  })
+
+  let prevScrollY = 0;
+  $(window).scroll(() => {
+    if(window.scrollY > prevScrollY && window.scrollY > 100) {
+      nav.addClass('hide')
+    } else {
+      nav.removeClass('hide')
+    }
+    prevScrollY = window.scrollY
   })
 }

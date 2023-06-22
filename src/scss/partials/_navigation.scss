@@ -10,7 +10,11 @@
   @include screen("xs", "md") {
     height: 100px;
     overflow: hidden;
-    transition: height .3s ease-out;
+    transition: height .3s ease-out, transform .3s ease-out;
+
+    &.hide:not(.expanded) {
+      transform: translateY(-100px);
+    }
   }
 
   .navbar-container {
