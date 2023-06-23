@@ -18,7 +18,6 @@ export default function home_init() {
     const element = $(el)
     element.click((e) => {
       const name = element.data('collapse')
-      console.log('test')
       const target = $('.collapse-content[data-collapse="'+name+'"]')
       if(target.hasClass('expanded')) {
         element.text('More')
