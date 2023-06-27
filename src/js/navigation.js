@@ -16,12 +16,13 @@ export default function navigation_init() {
     }
   })
 
-  const navDropdowns = $('.nav .dropdown-arrow');
+  const navDropdowns = $('.nav .dropdown .navbar-link');
   navDropdowns.each((i, el) => {
     const item = $(el)
-    item.click(() => {
+    item.click((e) => {
       const parent = item.parent()
       parent.toggleClass('expanded')
+      e.preventDefault()
     })
   })
 

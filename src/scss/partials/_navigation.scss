@@ -91,6 +91,7 @@
           color: $secondary;
           padding: 20px;
           text-decoration: none;
+          cursor: pointer;
 
           &.active, &:hover {
             color: $primary;
@@ -138,8 +139,6 @@
               height: 66px;
               top: 0;
               right: 0;
-              pointer-events: all;
-              cursor: pointer;
 
               &:before {
                 transform: translate(-50%, -20%) rotate(45deg);
