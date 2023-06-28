@@ -16,7 +16,7 @@ export default function navigation_init() {
     }
   })
 
-  const navDropdowns = $('.nav .dropdown .navbar-link');
+  const navDropdowns = $('.nav .dropdown > .navbar-link');
   navDropdowns.each((i, el) => {
     const item = $(el)
     item.click((e) => {

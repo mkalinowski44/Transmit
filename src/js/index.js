@@ -1,9 +1,11 @@
 import navigation from './navigation'
 import home from './home'
+import page from './page'
 import './cookies'
 
 navigation()
 home()
+page()
 
 CookiesInfo({
   title: 'Cookies Policy',
