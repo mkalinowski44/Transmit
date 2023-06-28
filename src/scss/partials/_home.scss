@@ -192,13 +192,29 @@
 
       .title {
         margin-top: 23px;
-        margin-bottom: 18px;
+        margin-bottom: 4px;
         line-height: 1.2em;
 
         @include screen("xs", "sm") {
           margin-top: 13px;
           margin-bottom: 5px;
         }
+      }
+
+      .date {
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 0px;
+        text-align: left;
+        display: block;
+        width: 100%;
+      }
+
+      .categories {
+        color: $primary;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 14px;
       }
 
       .description {
